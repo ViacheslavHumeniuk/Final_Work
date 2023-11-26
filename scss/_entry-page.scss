@@ -1,0 +1,136 @@
+@import "variables";
+
+.section-entry {
+  padding: 60px 280px;
+}
+
+.section-entry__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  img {
+    padding: 14px;
+    border-radius: 24px;
+    background-color: $white;
+  }
+
+  h3 {
+    font-size: 38px;
+    font-weight: 700;
+    background: $text-color;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    text-align: center;
+    font-size: 19px;
+    font-weight: 400;
+    color: $white;
+    line-height: 30px;
+  }
+
+  .button-primary {
+    font-weight: 700;
+    font-size: 16px;
+    color: $white;
+    background: $regular;
+    padding: 18px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.50);
+    margin-bottom: 60px;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background-color: $hover;
+    }
+  }
+}
+
+.section-entry__text {
+
+  .section-entry__entry-text__wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+
+  .entry-text__left {
+    width: 50%;
+  }
+
+  .entry-text__rights {
+    width: 50%;
+  }
+
+  .divider {
+    margin-bottom: 30px;
+  }
+
+  &__tittle {
+    color: $white;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    li {
+      padding-left: 12px;
+      position: relative;
+      color: $white;
+      font-size: 18px;
+      font-weight: 400;
+
+      &::before {
+        position: absolute;
+        top:10px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        display: block;
+        content:"";
+        border-radius: 50%;
+        background-color: $accent;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .section-entry {
+    padding: 60px 180px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section-entry {
+    padding: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .section-entry {
+    padding: 30px;
+  }
+  .section-entry__text {
+    .section-entry__entry-text__wrapper {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .entry-text__left {
+      width: 100%;
+    }
+    .entry-text__rights {
+      width: 100%;
+    }
+  }
+}

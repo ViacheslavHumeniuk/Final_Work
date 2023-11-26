@@ -1,0 +1,34 @@
+@import "variables";
+
+.header {
+  .nav-secondary {
+
+    .active {
+      color: $accent;
+      border-bottom: 3px solid $accent;
+    }
+
+  }
+}
+.section-cards {
+  padding: 160PX;
+}
+.section-cards__wrapper{
+  transition: all 0.3s ease;
+  cursor: pointer;
+  .hover-icons:hover {
+    color: $accent;
+  }
+}
+@media screen and (max-width: 1440px){
+
+
+}
+
+@media screen and (max-width: 375px) {
+  footer.footer--mobile {
+    &__services {
+      padding-top: 30px;
+    }
+  }
+}
